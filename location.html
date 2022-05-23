@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <article>
+        <section class="navbar align-content-start">
+            <ul class="nav container-fluid">
+                <li class="nav-item" id="keysClick" style="background: #0484D5;color: #fff;" >  
+              <img src="images/Group -2.png" class="mt-2 img-icon" alt="icon">
+                  <a id="kLink" class="nav-link" style="color: #fff">Keys</a>
+                </li>
+                <li class="nav-item" id="reportsClick" >
+                  <img src="images/Path 7.png" class="mt-2 img-icon" alt="icon" style="width: 60px;" >
+                  <a id="rLink" class="nav-link">Reports</a>
+                </li>
+              </ul>
+        </section>
+        <div class="line"></div>
+         <!-- keys  -->
+    <div id="keys" class="container-fluid ">
+        <section class="customers mb-3">
+            <h2>Keys</h2>
+            <div class="add-customers p-2"data-toggle="modal" data-target="#keyModal">
+                <span class="fa fa-plus-circle text-light "></span>
+                <span class="text-light">Add Key</span>
+            </div>
+        </section>
+        <section class="table">
+          <table class="table table-bordered bg-white">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Key-F0B-ID</th>
+                <th>Access-code</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>...</td>
+                <td>.....</td>
+                <td>.....</td>
+                <td>.....</td>
+                <td>
+                  <div class="actions" style="justify-content: space-between;">                    
+                    <img src="images/Group 7.png" alt="icon">
+                    <img src="images/Path 19.png" alt="icon">
+                  </div>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <!-- reports  -->
+    <div id="reports" class="container-fluid mt-2 d-none">
+      <section class="customers mb-3">
+        <h2>Reports</h2>
+    </section>
+      <section class="table">
+        <table class="table table-bordered bg-white">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Time</th>
+              <th>Location</th>
+              <th>Employee</th>
+              <th>Key</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Doe</td>
+              <td>...</td>
+              <td>.....</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </section>
+    </div>
+    </article>
+        <!-- key Modal -->
+        <div class="modal" id="keyModal">
+          <div class="modal-dialog">
+            <div class="modal-content" >
+              <div class="modal-header">
+                <h2 class="modal-title font-weight-bold">Add Key</h2>
+                <button type="button" class="close" data-dismiss="modal" style="font-size: 40px;" >&times;</button>
+              </div>
+              <div class="modal-body">
+                <section class="form">
+                  <form >
+                      <div class="inputs-field ">
+                          <div class="form-group mt-3">
+                              <input type="text" class="form-control" placeholder="Name">
+                          </div>
+                          <div class="form-group  mt-5">
+                              <input type="text" class="form-control" placeholder="Description">
+                          </div>
+                          <div class="form-group mt-5">
+                            <select class="form-control" id="sel1">
+                              <option>Customer</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                          <div class="form-group mt-5">
+                            <select class="form-control" id="sel1">
+                              <option>Location</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                          <div class="mt-5">
+                            <h4 class="font-weight-bold">Access Code</h4>
+                            <div class="code-field">
+                              <p class="lead" id="copyText">123456</p>
+                              <img src="images/Layer 3.png" alt="icon" id="copy_key_code">
+                            </div>
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block my-4 text-light">Add Key</button>
+                    </form>
+              </section>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+    <script src="js/location.js"></script>
+</body>
+</html>
